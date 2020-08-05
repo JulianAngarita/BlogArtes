@@ -1,0 +1,4 @@
+export const TIPO_ROL = {
+    PROFESOR:'PROFESOR',
+    ESTUDIANTE:'ESTUDIANTE'
+}
