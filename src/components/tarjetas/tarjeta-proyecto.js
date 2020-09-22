@@ -7,8 +7,8 @@ const TarjetaProyecto = ({
 }) => {
 
     return ( 
-        <Grid.Column stretched>
-        <Card>
+        <Grid.Column stretched >
+        <Card style={{minWidth: '56vh'}} fluid>
         <Image src={item.media.linkFoto} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{item.titulo}</Card.Header>

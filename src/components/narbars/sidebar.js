@@ -156,14 +156,15 @@ const SideBar = ({
                     </Button>
                   </span>
                 </Header>
-                <Grid columns={3}>
+                <Grid columns={2}>
                   {proyectos !== undefined && proyectos.length>0 ?
                   proyectos.map(i => (
                     <TarjetaProyecto
                         item={i}
+                        key={i._id}
                     />
                   ))
-                  :null}
+                  :'No hay proyectos'}
                 </Grid>
                 <FormularioTrabajo
                     modalProyecto={modalProyecto}

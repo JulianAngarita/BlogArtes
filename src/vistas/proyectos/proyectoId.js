@@ -58,8 +58,6 @@ const ProyectosId = ({
       })
     }
   }
-
-  console.log(proyectos);
   return (
     <Grid columns={1}>
       <Grid.Column>
@@ -114,8 +112,27 @@ const ProyectosId = ({
               >
               <Grid.Row>
                 <Container fluid>
+                <Header as="h1" textAlign="right">
+                  <span>
+                      <Button
+                        circular
+                        style={{
+                          backgroundColor: '#FFFFFF'
+                        }}
+                        size="tiny"
+                      >
+                         
+                        <Link 
+                          to={'/principalProfesor'}
+                          style={{
+                            textDecoration: 'none',
+                            color:"#000000"
+                          }}
+                        > <Icon name="left arrow"/> Volver </Link> 
+                      </Button>
+                  </span> </Header>
                 <Header as="h1" textAlign="center" style={{marginBottom:50 }}> 
-                  PROYECTOS
+                  Proyectos
                   <Popup
                       content="Debido a que esta pagina es un proyecto estudiantil, no cuenta con una base de datos paga, eso implica que no se puede almacenar imagenes, para crear un proyecto se recomienda subir la imagen a facebook de forma privada y copiar la direccion de enlace, para el video se puede copiar la url"
                       trigger={
@@ -127,18 +144,18 @@ const ProyectosId = ({
                         </label>
                       }
                   />
-                  <span>
-                      <Button> <Icon name="left arrow"/> <Link to={'/principalProfesor'}>VOLVER</Link> </Button>
-                  </span>
                 </Header>
-                <Grid columns={3}>
+                <Grid>
+                  <Grid.Row columns={2}>
                 {proyectos !== undefined && proyectos.length>0 ?
                   proyectos.map(i => (
                     <TarjetaProyecto
                         item={i}
+                        key={i._id}
                     />
                   ))
                   :null}
+                  </Grid.Row>
                 </Grid>
                 <ModalMensaje
                     estatus={modalMensajeEstatus}

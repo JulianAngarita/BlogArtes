@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Grid, Image, Icon, Form, TextArea} from 'semantic-ui-react'
+import {Card, Grid, Icon} from 'semantic-ui-react'
 import moment from 'moment-timezone';
 
 const TarjetaComentario = ({
@@ -8,7 +8,7 @@ const TarjetaComentario = ({
 
     return ( 
         <Grid.Column stretched>
-        <Card style={{maxHeight: '40vh', minHeight: '40vh'}}>
+        <Card style={{ minHeight: '40vh'}}>
         <Card.Content>
           <Card.Header>{item.asunto}</Card.Header>
           <Card.Meta> {item.nombres} {item.curso} </Card.Meta>

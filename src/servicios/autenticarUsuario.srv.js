@@ -1,9 +1,10 @@
 import {clienteAxios} from '../config/axios';
-import {LOGIN_EXITOSO, CERRAR_SESION} from '../tipos/usuario';
+import { CERRAR_SESION } from '../tipos/usuario';
 
 export const autenticarUsuario = async(payload) => {
     try {
         const respuesta = await clienteAxios.post('auth', payload)
+        console.log(respuesta.data.data.token)
         localStorage.setItem('token', respuesta.data.data.token)
         localStorage.setItem('usuario', JSON.stringify(respuesta.data.data.usuario))
         return(respuesta)
