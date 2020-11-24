@@ -110,10 +110,10 @@ const SideBar = ({
             <Menu.Item>
               <Icon name='info circle' />
               <p>
-                Blog Artes
+                Para Estefania
               </p>
               <p>
-                Pagina Estudiantil
+                De su admirador secreto 
               </p>
             </Menu.Item>
           </Sidebar>
@@ -137,14 +137,14 @@ const SideBar = ({
                 <Container fluid>
                 <Header as="h1" style={{marginBottom:20 }}> 
 
-                  MIS PROYECTOS
+                  MIS NOTAS
                   <Popup
-                      content="Debido a que esta pagina es un proyecto estudiantil, no cuenta con una base de datos paga, eso implica que no se puede almacenar imagenes, para crear un proyecto se recomienda subir la imagen a facebook de forma privada y copiar la direccion de enlace, para el video se puede copiar la url"
+                      content="Usa imagenes que esten en facebook o en google uwu subir imagenes me vale pesitos uwu"
                       trigger={
                         <label>
                           <Icon 
                             name="info circle"
-                            color="red"
+                            color="purple"
                           />
                         </label>
                       }
@@ -152,7 +152,7 @@ const SideBar = ({
                   <span>
                     <Button size="tiny" onClick={() => setModalProyecto(true)} style={{backgroundImage: `url(${bg})`, color: 'white'}} floated='right'>
                       <Icon name="add"/>
-                      NUEVO PROYECTO
+                      NUEVA NOTA
                     </Button>
                   </span>
                 </Header>
@@ -164,7 +164,7 @@ const SideBar = ({
                         key={i._id}
                     />
                   ))
-                  :'No hay proyectos'}
+                  : 'CREAME UNA NOTA:('}
                 </Grid>
                 <FormularioTrabajo
                     modalProyecto={modalProyecto}

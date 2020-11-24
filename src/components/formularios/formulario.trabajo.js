@@ -33,7 +33,7 @@ const FormularioTrabajo = ({
             <Modal.Header style={{backgroundImage: `url(${bg})`, color: 'white'}} > <Icon name="clipboard check"/>  Nuevo Proyecto </Modal.Header>
             <Modal.Content>
                 <Form>
-                    <h3> Datos Del Proyecto </h3>
+                    <h3> Datos De la Nota </h3>
                     <Form.Group widths="equal">
                         <Form.Input
                             label="Titulo"

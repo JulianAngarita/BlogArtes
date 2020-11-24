@@ -13,14 +13,12 @@ import {
   Popup,
   Table,
 } from 'semantic-ui-react'
-import {estadoInicialProyecto} from '../../estadosIniciales/estadoInicial- proyecto';
 import {obtenerUsuarios} from '../../servicios/usuarios.srv';
 import { cerrarSesion } from '../../servicios/autenticarUsuario.srv';
 import {useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import ModalMensaje from '../../components/modales/modalMensaje';
-import bg from '../../assets/69.jpg'
-import TarjetaProyecto from '../tarjetas/tarjeta-proyecto';
+import { TIPO_ROL } from '../../enum/tipo-rol';
 
 
 const SideBarProfesor = ({
@@ -33,7 +31,7 @@ const SideBarProfesor = ({
     mensaje: ''
   })
   const [ usuarios, setUsuarios ] = useState([])
-  const [ filtro, setFiltro ] = useState({
+  const [ filtro ] = useState({
     activo: true
   })
 
@@ -61,7 +59,8 @@ const SideBarProfesor = ({
     }
   }
 
-  console.log(usuarios);
+  const usuarioLista = usuarios.filter(usuario => usuario.rol !== TIPO_ROL.PROFESOR)
+
   return (
     <Grid columns={1}>
       <Grid.Column>
@@ -91,10 +90,10 @@ const SideBarProfesor = ({
             <Menu.Item>
               <Icon name='info circle' />
               <p>
-                Blog Artes
+                Estefania
               </p>
               <p>
-                Pagina Estudiantil
+                ¿Por que eres tan linda? 
               </p>
             </Menu.Item>
           </Sidebar>
@@ -117,14 +116,14 @@ const SideBarProfesor = ({
               <Grid.Row>
                 <Container fluid>
                 <Header as="h1" textAlign="center" style={{marginBottom:50 }}> 
-                  ESTUDIANTES
+                  Nosotros:3
                   <Popup
-                      content="Debido a que esta pagina es un proyecto estudiantil, no cuenta con una base de datos paga, eso implica que no se puede almacenar imagenes, para crear un proyecto se recomienda subir la imagen a facebook de forma privada y copiar la direccion de enlace, para el video se puede copiar la url"
+                      content="Desde aquí puedes ver mis notas (y las tuyas:3)"
                       trigger={
                         <label>
                           <Icon 
                             name="info circle"
-                            color="red"
+                            color="purple"
                           />
                         </label>
                       }
@@ -134,22 +133,19 @@ const SideBarProfesor = ({
                     {usuarios !== undefined && usuarios.length>0? 
                     <Table 
                       inverted
-                      size="small"
                     >
                       <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>NOMBRE</Table.HeaderCell>
                             <Table.HeaderCell>CORREO ELECTRONICO</Table.HeaderCell>
-                            <Table.HeaderCell>CURSO</Table.HeaderCell>
-                            <Table.HeaderCell>VER PROYECTOS</Table.HeaderCell>
+                            <Table.HeaderCell>VER NOTAS</Table.HeaderCell>
                         </Table.Row>
                       </Table.Header>
                       <Table.Body>
-                        {usuarios.map(i => (
+                        {usuarioLista.map(i => (
                           <Table.Row>
                             <Table.Cell width="4"> {i.nombres} {i.apellidos} </Table.Cell>
                             <Table.Cell width="4"> {i.email}</Table.Cell>
-                            <Table.Cell width="4"> {i.curso} </Table.Cell>
                             <Table.Cell width="4">
                               <Button
                                 style={{ 
@@ -159,9 +155,8 @@ const SideBarProfesor = ({
                                     borderRadius:25,
                                 }}
                               >
-                                <Icon name="eye"/>
                                 <Link  
-                                  style={{textDecoration: 'none', color: 'white', fontFamily: 'sans-serif', fontSize: 10}}
+                                  style={{textDecoration: 'none', color: 'white', fontFamily: 'sans-serif', fontSize: 14}}
                                   to={`/verProyectos/${i._id}`}
                                 >
                                   VER

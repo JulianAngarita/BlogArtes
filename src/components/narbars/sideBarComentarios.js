@@ -109,10 +109,10 @@ const SideBar = ({
             <Menu.Item>
               <Icon name='info circle' />
               <p>
-                Blog Artes
+                Para Estefita 
               </p>
               <p>
-                Pagina Estudiantil
+                De su crush
               </p>
             </Menu.Item>
         </Sidebar>
@@ -137,11 +137,12 @@ const SideBar = ({
               <Header as="h1" style={{marginBottom:20 }}> 
                 COMENTARIOS
                 <Popup
-                    content="Aquí apareceran los comentarios de todos los estudiantes"
+                    content="Aquí apareceran nuestros comentarios:3"
                     trigger={
                       <label>
                         <Icon 
                           name="info circle"
+                          color="purple"
                         />
                       </label>
                     }

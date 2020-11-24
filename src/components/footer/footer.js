@@ -15,7 +15,7 @@ const Footer = () => {
         <Grid style={{backgroundColor:"#000000", marginTop:0, position:'relative'}}>
             <Container>
                 <Header>
-                    <Header.Subheader style={{marginTop: 25,fontWeight:'bold', color:'#FFFFFF', textAlign: 'left' }}> Blog Artes </Header.Subheader>
+                    <Header.Subheader style={{marginTop: 25,fontWeight:'bold', color:'#FFFFFF', textAlign: 'left' }}> Pagina de Estefania </Header.Subheader>
                     <Reveal animated="small fade">
                         <Reveal.Content visible>
                             <Image
@@ -56,19 +56,16 @@ const Footer = () => {
                             href="https://andresistas.wixsite.com/siguetumeta"
                             target="_blank"
                             style={styles.linkFooter}>
-                            Pagina Wix de colegio Andres Bello
+                            Solo... perdón por tomarme el atrevimiento.
                         </List.Item>
                         <List.Item style={styles.linkFooter}>
                             <List.Content>
-                                    Contactos del profesor: <Icon name="mail"/> ofirduranm@gmail.com
+                                    De: JULIAN ANGARITA
                             </List.Content>
                         </List.Item>
                         <List.Item style={styles.linkFooter}>
                             <List.Content>
-                                    Contactos de desarrollador:
-                                    <Icon name="whatsapp" />
-                                    (+51) 3178104587 - <Icon name="mail"/>angaritaarias632@gmail.com
-                                    
+                                    Para: ESTEFANIA BONILLA
                             </List.Content>
                         </List.Item>
                         </List>

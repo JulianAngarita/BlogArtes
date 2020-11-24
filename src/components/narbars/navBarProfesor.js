@@ -1,17 +1,12 @@
 import React, { Fragment } from 'react';
 import { Menu, 
         Container,  
-        Icon, 
-        Dropdown,
-        Responsive, 
-        Dimmer, 
-        Button, 
-        List, 
-        Header} 
+        Icon,
+        Responsive,
+        Button,
+    } 
 from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import {useDispatch} from 'react-redux'
-import { cerrarSesion } from '../../servicios/autenticarUsuario.srv';
 
 
 
@@ -28,11 +23,11 @@ const NavBarProfesor = ({
                 <Menu fixed="top" style={{maxHeight:'10px !important', borderBottom:'3px solid black', height:40, fontSize:12, color:'#B9072F', textTransform:'uppercase', fontWeight: 'bold'}} >
                     <Container>
                         {usuarioOb !== null ? <Menu.Item as="h3">
-                            <Icon size="large" style={{marginRight: 15}} name="paint brush"/>
+                            <Icon size="large" style={{marginRight: 15}} name="heart"/>
                             {usuarioOb.nombres} {usuarioOb.apellidos}
                         </Menu.Item>: null}
                         <Menu.Item style={{textTransform:'uppercase', fontWeight: 'bold'}}>
-                            <Link to={'/estudiantes'} style={{textDecoration:'none', color:'#333333'}}>ESTUDIANTES</Link>
+                            <Link to={'/estudiantes'} style={{textDecoration:'none', color:'#333333'}}>NOTAS:3</Link>
                         </Menu.Item>
                         <Menu.Item style={{textTransform:'uppercase', fontWeight: 'bold'}}>
                             <Link to ={'/comentarios'}style={{textDecoration:'none', color:'#333333'}}>COMENTARIOS</Link>

@@ -132,9 +132,9 @@ const ProyectosId = ({
                       </Button>
                   </span> </Header>
                 <Header as="h1" textAlign="center" style={{marginBottom:50 }}> 
-                  Proyectos
+                  Notas &hearts;
                   <Popup
-                      content="Debido a que esta pagina es un proyecto estudiantil, no cuenta con una base de datos paga, eso implica que no se puede almacenar imagenes, para crear un proyecto se recomienda subir la imagen a facebook de forma privada y copiar la direccion de enlace, para el video se puede copiar la url"
+                      content="Aquí estan todas las notas de cada uno:3"
                       trigger={
                         <label>
                           <Icon 

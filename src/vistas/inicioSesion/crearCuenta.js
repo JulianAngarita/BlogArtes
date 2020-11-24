@@ -97,17 +97,11 @@ const CrearCuenta = () => {
                         onChange={handleChangeCuenta}
                     />
                     <Form.Select 
-                        label="Rol"
+                        label="Que vas a hacer?"
                         name="rol"
                         options={rolLista}
                         value={cuenta.rol}
                         onChange={handleChangeCuenta}
-                    />
-                    <Form.Input 
-                        label="Curso"
-                        name="curso"
-                        onChange={handleChangeCuenta}
-                        value={cuenta.curso}
                     />
                     <Form.Input 
                         label="Contraseña"

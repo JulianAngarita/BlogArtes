@@ -2,17 +2,12 @@ import React, { Fragment } from 'react';
 import {TIPO_ROL} from '../../enum/tipo-rol'
 import { Menu, 
         Container,  
-        Icon, 
-        Dropdown,
+        Icon,
         Responsive, 
-        Dimmer, 
         Button, 
-        List, 
-        Header} 
+    } 
 from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import {useDispatch} from 'react-redux'
-import { cerrarSesion } from '../../servicios/autenticarUsuario.srv';
 
 
 
@@ -20,20 +15,14 @@ const NavBar = ({
     setSideBar
 }) => {
 
-    const dispatch = useDispatch()
-
-    const salir = () => {
-        dispatch(cerrarSesion())
-    }
-
     const usuario = localStorage.getItem('usuario')
     let usuarioOb = JSON.parse(usuario)
     console.log(usuarioOb);
     const nombreBoton = () => {
         if(usuarioOb.rol === TIPO_ROL.PROFESOR && usuarioOb.rol !== null) {
-            return 'ESTUDIANTES'
+            return 'NOTAS:3'
         } else if (usuarioOb.rol === TIPO_ROL.ESTUDIANTE && usuarioOb.rol !== null) {
-            return 'MIS PROYECTOS'
+            return 'MIS NOTAS'
         } else {
             return null
         }
@@ -44,7 +33,7 @@ const NavBar = ({
                 <Menu fixed="top" style={{maxHeight:'10px !important', borderBottom:'3px solid black', height:40, fontSize:12, color:'#B9072F', textTransform:'uppercase', fontWeight: 'bold'}} >
                     <Container>
                         {usuarioOb !== null ? <Menu.Item as="h3">
-                            <Icon size="large" style={{marginRight: 15}} name="paint brush"/>
+                            <Icon size="large" style={{marginRight: 15}} name="heart"/>
                             {usuarioOb.nombres} {usuarioOb.apellidos}
                         </Menu.Item>: null}
                         <Menu.Item style={{textTransform:'uppercase', fontWeight: 'bold'}}>

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Grid, Form, Segment, Button, Header} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
-import imgBackGround from '../../assets/background.jpg';
+import imgBackGround from '../../assets/69.jpg';
 import ModalMensaje from '../../components/modales/modalMensaje';
 import { iniciarSesionAction } from '../../action/usuarioAction';
 

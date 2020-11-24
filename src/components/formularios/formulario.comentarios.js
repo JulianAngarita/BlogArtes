@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Modal, Icon, Form, TextArea, Popup, Button} from 'semantic-ui-react';
 import bg from '../../assets/background.jpg'
 
@@ -20,7 +20,7 @@ const FormularioComentarios = ({
         <Modal
             open={modalComentarios}
         >
-            <Modal.Header style={{backgroundImage: `url(${bg})`, color: 'white'}} > <Icon name="clipboard check"/>  Nuevo Proyecto </Modal.Header>
+            <Modal.Header style={{backgroundImage: `url(${bg})`, color: 'white'}} > <Icon name="clipboard check"/>  Nuevo Comentario </Modal.Header>
             <Modal.Content>
                 <Form>
                     <h3> Comentario </h3>
@@ -34,7 +34,7 @@ const FormularioComentarios = ({
                         <Form.Input
                             label={
                                 <Popup
-                                    content="Para responder tu comentario"
+                                    content="Ponlo para dar formalidad >:3"
                                     trigger={
                                         <label>
                                             <Icon name="info circle"/>
@@ -56,7 +56,7 @@ const FormularioComentarios = ({
                             onChange={onChangeComentario}
                         />
                         <Form.Input
-                            label="Curso"
+                            label="Apellido"
                             name="curso"
                             value={comentario.curso}
                             onChange={onChangeComentario}
